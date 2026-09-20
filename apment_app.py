@@ -76,7 +76,7 @@ def get_conversational_chain():
     Answer:
     """
     # Uses Gemini for the final answer generation
-    model = ChatGoogleGenerativeAI(model="gemini-2.5-flash", google_api_key=api_key, temperature=0.2)
+    model = ChatGoogleGenerativeAI(model="gemini-3.6-flash", google_api_key=api_key, temperature=0.2)
     prompt = PromptTemplate(template=prompt_template, input_variables=["context", "question"])
     
     # Using modern LangChain LCEL to completely bypass the broken legacy module
